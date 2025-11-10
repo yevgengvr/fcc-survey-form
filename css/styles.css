@@ -1,0 +1,184 @@
+:root {
+  --primary-color: #497460;
+  --text-color: #fff;
+  --input-bg: #f9f9f9;
+  --border-color: #e0e0e0;
+  --placeholder-color: #aaa;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 20px;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background: url(../assets/images/background.jpg) center center/cover no-repeat;
+}
+
+.survey {
+  max-width: 800px;
+  margin: 40px auto;
+  overflow: hidden;
+}
+
+.survey-header {
+  padding: 40px 30px;
+  background: var(--primary-color);
+}
+
+.h1-title {
+  margin-bottom: 15px;
+  font-size: 32px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.description {
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-color);
+}
+
+.survey-form {
+  padding: 40px 40px 80px;
+  background: #fff;
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 20px;
+  color: var(--primary-color);
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 15px;
+  font-size: 18px;
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  border-color: var(--primary-color);
+  outline: none;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  background: var(--input-bg);
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--placeholder-color);
+}
+
+select {
+  appearance: none;
+}
+
+.select-wrap {
+  position: relative;
+}
+
+.select-wrap::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 17px;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid #636363;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+select:invalid {
+  color: var(--placeholder-color);
+}
+
+select option {
+  color: #000;
+}
+
+.radio-group,
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-group label,
+.checkbox-group label {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.radio-option,
+.checkbox-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  width: 20px;
+  height: 20px;
+}
+
+input[type="checkbox"]:not(:checked),
+input[type="radio"]:not(:checked) {
+  accent-color: var(--border-color);
+}
+
+input[type="checkbox"]:checked,
+input[type="radio"]:checked {
+  accent-color: var(--primary-color);
+}
+
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.submit-btn {
+  padding: 16px 42px;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-color);
+  border: 2px solid transparent;
+  background: var(--primary-color);
+  transition: all 0.6s ease;
+  cursor: pointer;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background: transparent;
+}
+
+.survey-footer {
+  padding: 20px;
+  font-size: 18px;
+  text-align: center;
+  color: var(--text-color);
+  background: var(--primary-color);
+}
